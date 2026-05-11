@@ -1,0 +1,203 @@
+body{
+
+margin:0;
+
+font-family:'Poppins',sans-serif;
+
+/* BACKGROUND IMAGE */
+
+background:
+linear-gradient(rgba(255,240,246,0.6),rgba(255,234,244,0.6)),
+url('../Images/Background.png');
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+}
+
+
+/* HEADER */
+
+header{
+    background:#ffe4ec;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    padding:15px 0 8px; /* reduced top & bottom space */
+}
+
+
+/* Header + Nav container */
+.nav-container{
+    max-width:900px;
+    margin:auto;
+    padding:0 15px; /* removed large vertical padding */
+    text-align:center;
+}
+
+/* Main content container */
+.main-container{
+    max-width:900px;   /* keeps the content narrower */
+    margin:auto;
+    padding:30px 20px;
+}
+
+/* Articles grid */
+.articles-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); /* flexible columns */
+    gap:25px;
+}
+
+/* SITE TITLE */
+
+.site-title{
+font-family:'Dancing Script',cursive;
+font-size:100px;
+color:#ff6f91;
+/*margin-bottom:10px;*/
+margin:0 0 20px 0; /* adds space below title */
+line-height:1;
+padding:0;
+text-shadow:2px 2px 8px rgba(0,0,0,0.15);
+}
+
+/* NAVIGATION */
+
+nav a{
+
+text-decoration:none;
+
+margin:0 15px;
+
+color:#444;
+
+font-weight:500;
+
+position:relative;
+
+}
+
+
+nav a::after{
+
+content:"";
+
+width:0;
+
+height:2px;
+
+background:#c499a5;
+
+position:absolute;
+
+left:0;
+
+bottom:-5px;
+
+transition:0.3s;
+
+}
+
+
+nav a:hover::after{
+
+width:100%;
+
+}
+
+
+
+/* HERO */
+/* About Page Aesthetic Layout */
+.main-container {
+    max-width: 800px; /* Keep text narrow for better readability */
+    margin: 60px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.7); /* Soft white overlay */
+    border-radius: 30px; /* Rounded corners for that soft look */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Subtle depth */
+    text-align: center;
+}
+
+.about-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: #ff6f91;
+    margin-bottom: 10px;
+}
+
+.about-intro {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.about-body {
+    text-align: left; /* Easier to read long text */
+    line-height: 1.8;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.about-body h3 {
+    font-family: 'Playfair Display', serif;
+    color: #ff6f91;
+    margin: 30px 0 15px 0;
+    font-size: 28px;
+}
+
+/* Add a visual flourish (optional) */
+/*.about-body p::first-letter {
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+    color: #ff6f91;
+    float: left;
+    margin-right: 10px;
+}*/
+
+
+
+/* FOOTER */
+
+footer{
+
+text-align:center;
+
+padding:25px;
+
+background:#ffe4ec;
+
+margin-top:40px;
+
+}
+
+
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.site-title{
+
+font-size:34px;
+
+}
+
+.hero h2{
+
+font-size:30px;
+
+}
+
+nav a{
+
+display:inline-block;
+
+margin:8px;
+
+}
+
+}

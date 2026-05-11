@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background:
+    linear-gradient(rgba(255,240,246,0.6), rgba(255,234,244,0.6)),
+    url('../Images/Background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* HEADER */
+header{
+    background:#ffe4ec;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    padding:15px 0 8px; /* reduced top & bottom space */
+}
+
+
+/* Header + Nav container */
+.nav-container{
+    max-width:900px;
+    margin:auto;
+    padding:0 15px; /* removed large vertical padding */
+    text-align:center;
+}
+
+/* Main content container */
+.main-container{
+    max-width:900px;   /* keeps the content narrower */
+    margin:auto;
+    padding:30px 20px;
+}
+
+/* Articles grid */
+.articles-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); /* flexible columns */
+    gap:25px;
+}
+
+/* SITE TITLE */
+
+.site-title{
+font-family:'Dancing Script',cursive;
+font-size:100px;
+color:#ff6f91;
+/*margin-bottom:10px;*/
+margin:0 0 20px 0; /* adds space below title */
+line-height:1;
+padding:0;
+text-shadow:2px 2px 8px rgba(0,0,0,0.15);
+}
+
+nav a{
+    text-decoration:none;
+    margin:0 15px;
+    color:#444;
+    font-weight:500;
+    position:relative;
+}
+
+nav a::after{
+    content:"";
+    width:0;
+    height:2px;
+    background:#c499a5;
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* MAIN CONTAINER */
+.main-container{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+/* CONTACT SECTION: Split layout */
+.contact-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    padding:0 20px; 
+}
+
+/* LEFT SIDE */
+.contact-left{
+    flex: 1;
+    margin-top: 0; /* remove any extra top margin */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* aligns content to top */
+}
+
+.contact-left h2{
+    font-family:'Playfair Display', serif;
+    font-size:60px;
+    margin: 0 0 20px 0;  /* removes top margin, keeps bottom margin */
+}
+
+.contact-left p{
+    font-size:22px;
+    line-height:1.6;
+    margin-top: 0; /* ensures no extra spacing above paragraphs */
+}
+
+/* RIGHT SIDE */
+.contact-right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* CONTACT BOXES */
+.contact-box{
+    background: #ffe4ec;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-box a{
+    font-size:22px;
+    color:#ff6f91;
+    text-decoration: none;
+    font-weight: 500;
+    align-items: center;
+}
+
+.contact-box a:hover{
+    text-decoration: underline;
+}
+
+.contact-box i{
+    font-size:26px;
+    color:#ff6f91;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:25px;
+    background:#ffe4ec;
+    margin-top:40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .contact-section{
+        flex-direction: column;
+    }
+
+    .contact-left, .contact-right{
+        flex: 1;
+    }
+
+    .contact-left h2{
+        font-size:42px;
+    }
+
+    .contact-left p{
+        font-size:18px;
+    }
+
+    .contact-box{
+        justify-content: flex-start;
+    }
+}

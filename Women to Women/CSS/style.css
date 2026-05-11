@@ -1,0 +1,351 @@
+body{
+
+margin:0;
+
+font-family:'Poppins',sans-serif;
+
+/* BACKGROUND IMAGE */
+
+background:
+linear-gradient(rgba(255,240,246,0.6),rgba(255,234,244,0.6)),
+url('../Images/Background.png');
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+}
+
+
+/* HEADER */
+
+header{
+    background:#ffe4ec;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    padding:15px 0 8px; /* reduced top & bottom space */
+}
+
+
+
+/* Header + Nav container */
+.nav-container{
+    max-width:900px;
+    margin:auto;
+    padding:0 15px; /* removed large vertical padding */
+    text-align:center;
+}
+
+/* Main content container */
+.main-container{
+    max-width:900px;   /* keeps the content narrower */
+    margin:auto;
+    padding:30px 20px;
+}
+
+/* Articles grid */
+.articles-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); /* flexible columns */
+    gap:25px;
+}
+
+
+/* SITE TITLE */
+
+.site-title{
+font-family:'Dancing Script',cursive;
+font-size:100px;
+color:#ff6f91;
+/*margin-bottom:10px;*/
+margin:0 0 20px 0; /* adds space below title */
+line-height:1;
+padding:0;
+text-shadow:2px 2px 8px rgba(0,0,0,0.15);
+}
+
+
+/* NAVIGATION */
+
+nav a{
+
+text-decoration:none;
+
+margin:0 15px;
+
+color:#444;
+
+font-weight:500;
+
+position:relative;
+
+}
+
+
+nav a::after{
+
+content:"";
+
+width:0;
+
+height:2px;
+
+background:#c499a5;
+
+position:absolute;
+
+left:0;
+
+bottom:-5px;
+
+transition:0.3s;
+
+}
+
+
+nav a:hover::after{
+
+width:100%;
+
+}
+
+
+
+/* HERO */
+
+.hero{
+    color:black;
+    display:flex;               /* enable flexbox */
+    flex-direction:column;      /* stack h2 and p vertically */
+    justify-content:center;      /* center vertically */
+    align-items:center;          /* center horizontally */
+    text-align:center;
+    /*height:80vh;*/               /* takes 80% of viewport height */
+    padding:0 20px;             /* horizontal padding */
+}
+
+.hero h2{
+    font-family:'Playfair Display', serif;
+    font-size:55px;   /* main heading */
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:22px;   /* subheading */
+    margin-top:0;
+    max-width:700px;  /* prevents super wide text */
+}
+
+/* Responsive adjustments */
+@media(max-width:768px){
+    .hero h2{
+        font-size:32px;
+    }
+    .hero p{
+        font-size:18px;
+    }
+}
+
+/* MAIN WIDTH CONTROL */
+
+.main-container{
+
+max-width:1100px;
+
+margin:auto;
+
+padding:40px 20px;
+
+}
+
+
+
+/* GRID */
+
+.articles-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+align-items: stretch; /* Forces all cards in a row to be the same height */
+
+}
+
+
+
+/* CARD */
+
+.card{
+
+background:white;
+
+border-radius:12px;
+
+overflow:hidden;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+transition:0.3s;
+
+text-align:center;
+
+padding-bottom:25px; /* Added padding for better spacing at the bottom */
+
+display: flex;
+
+flex-direction: column;   /* Stack content vertically */
+
+height: 100%; /* Ensures card fills the grid height */
+
+
+}
+
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+
+}
+
+
+
+/* CARD IMAGE */
+
+.card-image{
+    
+overflow:hidden;
+
+}
+
+
+.card-image img{
+
+width:100%;
+
+height:200px;
+
+object-fit:cover;
+
+transition:transform 0.4s ease;
+
+}
+
+
+.card:hover img{
+
+transform:scale(1.1);
+
+}
+
+
+
+/* CARD TEXT */
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;  /* This is the key: it expands to fill the card */
+    padding: 20px 15px;
+    justify-content: space-between; /* Aligns title top, p middle, button bottom */
+}
+
+/* Targeting all potential title tags to ensure font uniformity */
+.card-content h3, 
+.card-content .card-title,
+.card-content h2 {
+
+font-family:'Playfair Display', serif !important; /* Force font to match "Advice" */
+font-weight: 700;
+font-size: 26px;
+margin: 0 0 10px 0;
+color: #000;
+
+}
+
+
+.card-content p{
+
+margin: 10px 0;
+flex-grow: 1;  /* Pushes the button down */
+display: flex;
+align-items: center; /* Centers text vertically if descriptions vary in length */
+justify-content: center;
+font-size: 15px;
+line-height: 1.5;
+color: #444;
+
+}
+
+
+
+/* BUTTON */
+
+.card a{
+
+display: inline-block;
+margin-top: auto; /* Pushes button to the very bottom of the flex container */
+font-family: 'Poppins', sans-serif;
+padding: 12px 25px;
+border-radius: 25px;
+text-decoration: none;
+background: #ff6f91;
+color: white;
+transition: 0.3s;
+font-weight: 600;
+align-self: center; 
+}
+
+
+.card a:hover{
+
+background:#ff3f75;
+
+}
+
+
+
+/* FOOTER */
+
+footer{
+
+text-align:center;
+
+padding:25px;
+
+background:#ffe4ec;
+
+margin-top:40px;
+
+}
+
+
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.site-title{
+
+font-size:34px;
+
+}
+
+.hero h2{
+
+font-size:30px;
+
+}
+
+nav a{
+
+display:inline-block;
+
+margin:8px;
+
+}
+
+}
